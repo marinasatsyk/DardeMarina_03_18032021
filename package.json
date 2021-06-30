@@ -1,0 +1,19 @@
+{
+    "name": "site_ohmyfood",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "sass": "sass --watch ./sass/main.scss:.public/css/style.css"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/marinasatsyk/DardeMarina_03_18032021.git"
+    },
+    "author": "dardemarina",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/marinasatsyk/DardeMarina_03_18032021/issues"
+    },
+    "homepage": "https://github.com/marinasatsyk/DardeMarina_03_18032021#readme"
+}
