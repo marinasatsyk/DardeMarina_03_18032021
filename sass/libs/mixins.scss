@@ -1,0 +1,7 @@
+@mixin gradient_btn {
+    background: linear-gradient(to bottom right, $color-secondary, $color-primary);
+}
+
+@mixin shadow_box {
+    box-shadow: 0 4px 4px $shadow;
+}

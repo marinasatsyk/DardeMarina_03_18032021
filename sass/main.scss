@@ -1,10 +1,6 @@
-* {
-    padding: 0;
-    margin: 0;
-    list-style-type: none;
-}
-
-.svg {
-    width: 20px;
-    height: 20px;
-}
+@import "./libs/reset.scss";
+@import "./libs/responsive.scss";
+@import "./libs/variables.scss";
+@import "./libs/mixins.scss";
+@import "./libs/fonts.scss";
+@import "./style.scss";
