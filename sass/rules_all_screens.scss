@@ -1,0 +1,201 @@
+@media #{$all-screen} {
+    body {
+        max-width: 1400px;
+        margin: 0 auto;
+        text-align: center;
+        font-family: $font-body;
+        a {
+            color: black;
+            &:visited {
+                color: black;
+            }
+        }
+        .svg {
+            width: 20px;
+            height: 20px;
+        }
+    }
+    header.main {
+        padding: 20px 0;
+    }
+    .all_screen {
+        display: flex;
+        flex-direction: row-reverse;
+        width: 100%;
+        justify-content: left;
+        height: 290px;
+        .explorer {
+            background-color: $color-btn-off;
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            h1 {
+                font-size: 1.5rem;
+                font-weight: bold;
+                text-align: left;
+                padding-left: 50px;
+            }
+        }
+        p.main {
+            padding: 10px 0;
+            background-color: $color-back;
+            width: 50%;
+            display: block;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    .btn--round {
+        border-radius: 40px;
+        border: none;
+        font-weight: bold;
+        padding: 20px;
+        @include gradient_btn;
+        @include shadow_box;
+        color: #ffffff;
+        cursor: pointer;
+        font-size: 0.9rem;
+        position: relative;
+        z-index: 1;
+        &:hover {
+            &::after {
+                opacity: 1;
+            }
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            @include gradient_btn_activ;
+            @include shadow_box_aciv;
+            border-radius: 40px;
+            opacity: 0;
+            z-index: -1;
+            transition: opacity 250ms;
+        }
+    }
+    .function {
+        height: 290px;
+        display: flex;
+        h2 {
+            padding-left: 50px;
+            text-align: left;
+            @include title;
+            margin-bottom: 5%;
+            width: 20%;
+        }
+        ol {
+            list-style-type: none;
+            counter-reset: my-counter;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 80%;
+        }
+        li {
+            display: flex;
+            width: 80%;
+            align-items: center;
+            &::before {
+                content: counter(my-counter);
+                counter-increment: my-counter;
+                color: white;
+                display: block;
+                height: 20px;
+                width: 20px;
+                border-radius: 50%;
+                background-color: $color-primary;
+                position: relative;
+                right: -10px;
+            }
+            span {
+                display: flex;
+                justify-content: space-evenly;
+                height: 50px;
+                width: 280px;
+                align-items: center;
+                border-radius: 30px;
+                background-color: $color-btn-off;
+                @include shadow_box;
+            }
+            &:nth-child(3) {
+                span {
+                    background-color: $color-btn-actif;
+                }
+            }
+        }
+    }
+    .resto_list {
+        padding: 60px 20px;
+        background-color: $color-btn-off;
+        h2 {
+            @include title;
+            padding-left: 30px;
+            text-align: left;
+            margin-bottom: 20px;
+        }
+        ul {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+        li {
+            height: 250px;
+            width: 250px;
+            margin-bottom: 20px;
+            border-radius: 5%;
+            overflow: hidden;
+            @include shadow_box;
+            .img_res_main {
+                @include img_list_restos;
+                display: flex;
+                justify-content: right;
+            }
+            .label {
+                @include label;
+            }
+            span.res_1 {
+                background-image: url('../images/mobile_version/palette_340_227.jpg');
+            }
+        }
+        .res_2 {
+            background-image: url('../images/mobile_version/enchantee_340_425.jpg');
+        }
+        .res_3 {
+            background-image: url('../images/mobile_version/française_340_227.jpg');
+        }
+        .res_4 {
+            background-image: url('../images/mobile_version/Delice_340_233.jpg');
+        }
+        .description {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-left: 10px;
+            padding-right: 20px;
+        }
+        .text__description {
+            text-align: left;
+        }
+        h3 {
+            @include title;
+            font-size: 1rem;
+            margin-bottom: 5px;
+        }
+        img.heart_svg {
+            transition: background-color 400ms;
+            &:focus {
+                background-color: $color-gradient;
+                object-fit: cover;
+            }
+        }
+    }
+    footer.main {
+        @include footer_mobile;
+    }
+}

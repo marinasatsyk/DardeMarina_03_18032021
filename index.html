@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./public/style.css">
     <title>OHMYFOOD</title>
-    <link rel="stylesheet" type="text/css" href="./public/css/style.css">
+
 </head>
 
 <body>
@@ -18,48 +19,52 @@
     </header>
 
     <!--partie avec map-->
-    <p class="main">
-        <img src="./images/svg_images/map-marker-alt-solid.svg" class="svg" alt="image map"> Paris, Belleville
-    </p>
-    <!--Section explorez nos restaurans-->
-    <section class="main explorer">
-        <h1>Réservez le menu qui vous convient</h1>
-        <p>Découvrez des restaurants d'exeption, séléctionnés par nos soins.
+    <div class="all_screen">
+        <p class="main">
+            <img src="./images/svg_images/map-marker-alt-solid.svg" class="svg" alt="image map"> Paris, Belleville
         </p>
+        <!--Section explorez nos restaurans-->
+        <section class="main explorer">
+            <h1>Réservez le menu qui vous convient</h1>
+            <p>Découvrez des restaurants d'exeption, séléctionnés par nos soins.
+            </p>
 
-        <form action="#list_rest">
-            <button class="btn round" type="submit">Explorer nos restaurants</button>
+            <form action="#list_rest">
+                <button class="btn--round" type="submit">Explorer nos restaurants<div class="round__bg"></div></button>
 
-        </form>
-    </section>
+            </form>
+        </section>
+    </div>
     <!--Section fonctionnement-->
     <section class="main function">
         <h2>Fonctionnement</h2>
 
         <ol>
-            <li><span><img src="./images/svg_images/mobile-alt-solid.svg" class="svg" alt="image mobil">Choisissez un restaurant</span></li>
-            <li><span> <img src="./images/svg_images/list-ul-solid.svg" class="svg" alt="imgage list"> Composez vote menu</span></li>
-            <li><span><img src="./images/svg_images/store-solid.svg" class="svg" alt="image store"> Dégustez au restaurant</span></li>
+            <li class="btn"><a href="#"><span><img src="./images/svg_images/mobile-alt-solid.svg" class="svg" alt="image mobil">Choisissez un restaurant</span></a></li>
+            <li class="btn"><a href="#"><span> <img src="./images/svg_images/list-ul-solid.svg" class="svg" alt="imgage list"> Composez vote menu</span></a></li>
+            <li class="btn"><a href="#"><span><img src="./images/svg_images/store-solid.svg" class="svg" alt="image store"> Dégustez au restaurant</span></a></li>
         </ol>
 
 
     </section>
     <!--Section Restaurants -->
-    <section id="list_rest" class="main">
-        <h3>Restaurants</h3>
-        <ol>
+    <section id="list_rest" class="main resto_list">
+        <h2>Restaurants</h2>
+        <ul>
             <li>
-                <article>
+                <article class="bloc__resto_list resto_first ">
                     <a href="./html_pages/palette.html" class="restos">
 
-                        <span class="res_1">&nbsp;</span>
+                        <span class="img_res_main res_1">&nbsp;
+                            <div class="label">Nouveau</div>
+                        </span>
 
                         <div class="description">
-                            <div>
+                            <div class="text__description">
                                 <h3>La palette du gout</h3>
-                                <img src="./images/svg_images/heart-regular.svg" class="svg" alt="image heart">
+                                <p>Ménilmontant</p>
                             </div>
-                            <p>Menilmontant</p>
+                            <span> <i class="fas fa-heart fa-lg"></i></span>
 
                         </div>
                     </a>
@@ -71,14 +76,14 @@
                 <article>
                     <a href="./html_pages/enchantee.html" class="restos">
 
-                        <span class="res_2">&nbsp;</span>
+                        <span class="img_res_main res_2">&nbsp;<div class="label">Nouveau</div></span>
 
                         <div class="description">
-                            <div>
+                            <div class="text__description">
                                 <h3>La note enchantée</h3>
-                                <img src="./images/svg_images/heart-regular.svg" class="svg" alt="image heart">
+                                <p>Charonne</p>
                             </div>
-                            <p>Charonne</p>
+                            <img src="./images/svg_images/heart-regular.svg" class="svg heart_svg" alt="image heart">
 
                         </div>
                     </a>
@@ -89,14 +94,14 @@
                 <article>
                     <a href="./html_pages/française.html" class="restos">
 
-                        <span class="res_3 ">&nbsp;</span>
+                        <span class="img_res_main res_3 ">&nbsp;</span>
 
                         <div class="description">
-                            <div>
+                            <div class="text__description">
                                 <h3>A la française</h3>
-                                <img src="./images/svg_images/heart-regular.svg" class="svg" alt="image heart">
+                                <p>Cité rouge</p>
                             </div>
-                            <p>Cité rouge</p>
+                            <img src="./images/svg_images/heart-regular.svg" class="svg heart_svg" alt="image heart">
 
                         </div>
                     </a>
@@ -108,34 +113,34 @@
                 <article>
                     <a href="./html_pages/délice.html" class="restos">
 
-                        <span class="res_4 ">&nbsp;</span>
+                        <span class="img_res_main res_4 ">&nbsp;</span>
 
                         <div class="description">
-                            <div>
+                            <div class="text__description">
                                 <h3>Le délice des sens</h3>
-                                <img src="./images/svg_images/heart-regular.svg" class="svg" alt="image heart">
+                                <p>Folie-Mericourt</p>
                             </div>
-                            <p>Folie-Mericourt</p>
+                            <img src="./images/svg_images/heart-regular.svg" class="svg heart_svg" alt="image heart">
 
                         </div>
                     </a>
                 </article>
             </li>
 
-        </ol>
+        </ul>
     </section>
     <!--Footer -->
     <footer class="main">
-        <img src="./images/logo/ohmyfood@2x.svg" alt="logo ohmyfood">
+        <img src="./images/logo/logo_white.svg" class="logo__footer" alt="logo ohmyfood">
         <p>
             <a href="#">
-                <img src="./images/svg_images/utensils-solid.svg" class="svg" alt="image tabelware"> Proposer un restaurant
+                <img src="./images/svg_images/utensils-solid.svg" class="svg__footer" alt="image tabelware"> Proposer un restaurant
             </a>
         </p>
 
         <p>
             <a href="#">
-                <img src="./images/svg_images/hands-helping-solid.svg" class="svg" alt="image helping"> Devenir partenaire
+                <img src="./images/svg_images/hands-helping-solid.svg" class="svg__footer" alt="image helping"> Devenir partenaire
             </a>
         </p>
 
