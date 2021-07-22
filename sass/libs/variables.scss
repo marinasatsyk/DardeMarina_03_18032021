@@ -14,3 +14,9 @@ $height-img-main:175px;
 $color-shadow-text: darken($color-tertiary, 30%);
 $padding-mobile: 0 20px;
 $color-gradient: linear-gradient(to bottom right, $color-secondary, $color-primary);
+// pour le demarrague gu site
+$prog-bar-dur: 3s;
+$prog-bar-delay: 150ms;
+$anim-dur: 2000ms;
+$anim-num: 9;
+$anim-delay: math.div($anim-dur, $anim-num);

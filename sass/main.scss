@@ -1,3 +1,4 @@
+@use 'sass:math';
 @import "./libs/reset.scss";
 @import "./libs/responsive.scss";
 @import "./libs/variables.scss";
@@ -7,3 +8,4 @@
 @import "./style.scss";
 @import "./menu_rules_all.scss";
 @import "./libs/keyframes.scss";
+@import "./libs/rules_charging.scss";
