@@ -74,3 +74,37 @@
         @include shadow_box_aciv;
     }
 }
+
+@mixin heart {
+    .heart {
+        position: relative;
+        .fa-heart {
+            font-size: 20px;
+            position: absolute;
+            top: -2vh;
+            right: -1vh;
+        }
+        .far {
+            opacity: 1;
+            z-index: 1;
+        }
+        .fas {
+            opacity: 0;
+            z-index: 0;
+            &:before {
+                background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                display: initial;
+            }
+        }
+        &:hover {
+            &>.fas {
+                animation: opacity_anim 1000ms 150ms both;
+            }
+            &>.far {
+                animation: opacity_anim 500ms reverse both;
+            }
+        }
+    }
+}

@@ -41,6 +41,7 @@
                 font-size: 1.5rem;
                 margin-right: 20px;
             }
+            @include heart;
         }
         ul.menu {
             display: flex;
@@ -146,12 +147,12 @@
                     }
                 }
             }
-            .btn--round {
-                margin-bottom: 30px;
-            }
-            /*FOOTER*/
-            footer {
-                @include footer_mobile;
-            }
+        }
+        .btn--round {
+            margin-bottom: 30px;
+        }
+        /*FOOTER*/
+        footer {
+            @include footer_mobile;
         }
     }

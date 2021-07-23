@@ -187,13 +187,7 @@
             font-size: 1rem;
             margin-bottom: 5px;
         }
-        img.heart_svg {
-            transition: background-color 400ms;
-            &:focus {
-                background-color: $color-gradient;
-                object-fit: cover;
-            }
-        }
+        @include heart;
     }
     footer.main {
         @include footer_mobile;
