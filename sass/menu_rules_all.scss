@@ -41,7 +41,8 @@
                 font-size: 1.5rem;
                 margin-right: 20px;
             }
-            @include heart;
+            @include heart($heart_top_menu,
+            $heart_right_menu);
         }
         ul.menu {
             display: flex;
@@ -91,7 +92,7 @@
                 }
                 .separator__btn__menu {
                     display: flex;
-                    padding: 10px 0 10px 10px;
+                    padding: .6rem;
                     width: calc(100% - 100px);
                     justify-content: space-between;
                     align-items: flex-end;

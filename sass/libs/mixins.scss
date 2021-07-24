@@ -75,22 +75,20 @@
     }
 }
 
-@mixin heart {
+@mixin heart ($top: $heart_top_main, $right: $heart_right_main) {
     .heart {
         position: relative;
         .fa-heart {
             font-size: 20px;
             position: absolute;
-            top: -2vh;
-            right: -1vh;
+            top: $top;
+            right: $right;
         }
         .far {
             opacity: 1;
-            z-index: 1;
         }
         .fas {
-            opacity: 0;
-            z-index: 0;
+            transform: scale(0);
             &:before {
                 background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
                 -webkit-background-clip: text;
@@ -100,10 +98,10 @@
         }
         &:hover {
             &>.fas {
-                animation: opacity_anim 1000ms 150ms both;
+                animation: heart 450ms 50ms cubic-bezier(.62, .21, .42, 1.03) both;
             }
             &>.far {
-                animation: opacity_anim 500ms reverse both;
+                animation: opacity_anim 350ms reverse both;
             }
         }
     }

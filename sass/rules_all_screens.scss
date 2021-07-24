@@ -82,6 +82,7 @@
     .function {
         height: 290px;
         display: flex;
+        padding: 3rem;
         h2 {
             padding-left: 50px;
             text-align: left;
@@ -119,7 +120,7 @@
                 height: 50px;
                 width: 280px;
                 align-items: center;
-                border-radius: 30px;
+                border-radius: 15px;
                 background-color: $color-btn-off;
                 @include shadow_box;
             }
@@ -151,10 +152,11 @@
             border-radius: 5%;
             overflow: hidden;
             @include shadow_box;
+            background: #fff;
             .img_res_main {
                 @include img_list_restos;
                 display: flex;
-                justify-content: right;
+                justify-content: flex-end;
             }
             .label {
                 @include label;
@@ -177,7 +179,7 @@
             justify-content: space-between;
             align-items: center;
             padding-left: 10px;
-            padding-right: 20px;
+            padding-right: 10px;
         }
         .text__description {
             text-align: left;
@@ -187,7 +189,8 @@
             font-size: 1rem;
             margin-bottom: 5px;
         }
-        @include heart;
+        @include heart ($heart_top_main,
+        $heart_right_main);
     }
     footer.main {
         @include footer_mobile;
