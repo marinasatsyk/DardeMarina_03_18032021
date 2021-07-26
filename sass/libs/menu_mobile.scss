@@ -11,16 +11,7 @@
             left: 30px;
         }
     }
-    .img__menu {
-        display: block;
-        display: flex;
-        align-items: flex-end;
-        background-image: url('../images/fullscreen_version/palette_1400_933.jpg');
-        height: 300px;
-        background-position: center;
-        overflow: hidden;
-        background-repeat: no-repeat;
-    }
+    @include img_menu;
     .liner_bottom {
         display: block;
         width: 100%;
@@ -48,8 +39,7 @@
             font-size: 1.5rem;
             margin-right: 20px;
         }
-        @include heart($heart_top_menu,
-        $heart_right_menu);
+        @include heart($heart_top_menu, $heart_right_menu);
     }
     ul.menu {
         display: flex;

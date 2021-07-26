@@ -28,6 +28,20 @@
     margin-bottom: 15px;
 }
 
+@mixin img_menu ($place_img: url('../images/mobile_version/palette_340_227.jpg')) {
+    .img__menu {
+        display: block;
+        display: flex;
+        align-items: flex-end;
+        background-image: $place_img;
+        background-size: contain;
+        height: 250px;
+        background-position: center;
+        overflow: hidden;
+        background-repeat: no-repeat;
+    }
+}
+
 @mixin label {
     width: -moz-min-content;
     width: -webkit-min-content;
@@ -75,7 +89,8 @@
     }
 }
 
-@mixin heart ($top: $heart_top_main, $right: $heart_right_main) {
+@mixin heart ($top: $heart_top_main,
+$right: $heart_right_main) {
     .heart {
         position: relative;
         .fa-heart {
@@ -108,7 +123,8 @@
 }
 
 //progress bar 
-@mixin prog_bar ($height_bar: 2vw, $padding_bar: .25rem) {
+@mixin prog_bar ($height_bar: 2vw,
+$padding_bar: .25rem) {
     .progress {
         position: absolute;
         top: 50%;
