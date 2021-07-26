@@ -29,17 +29,15 @@
 }
 
 @mixin img_menu ($place_img: url('../images/mobile_version/palette_340_227.jpg')) {
-    .img__menu {
-        display: block;
-        display: flex;
-        align-items: flex-end;
-        background-image: $place_img;
-        background-size: cover;
-        height: 250px;
-        background-position: center;
-        overflow: hidden;
-        background-repeat: no-repeat;
-    }
+    display: block;
+    display: flex;
+    align-items: flex-end;
+    background-image: $place_img;
+    background-size: cover;
+    height: 250px;
+    background-position: center;
+    overflow: hidden;
+    background-repeat: no-repeat;
 }
 
 @mixin label {
@@ -117,6 +115,18 @@ $right: $heart_right_main) {
             }
             &>.far {
                 animation: opacity_anim 350ms reverse both;
+            }
+        }
+    }
+}
+
+//animation apparistion du menu progressivement
+@mixin anim_menu ($anim-num: 9) {
+    .barre__menu {
+        animation: menu $anim-dur both ease-in-out;
+        @for $i from 1 through $anim-num {
+            &--#{$i} {
+                animation-delay: $anim-delay*$i;
             }
         }
     }

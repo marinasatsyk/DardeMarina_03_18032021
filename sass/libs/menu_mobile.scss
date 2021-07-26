@@ -11,7 +11,18 @@
             left: 30px;
         }
     }
-    @include img_menu;
+    .img__menu {
+        @include img_menu;
+    }
+    .img__menu--enchentee {
+        @include img_menu ($place_img: url('../images/mobile_version/enchantee_340_425.jpg'))
+    }
+    .img__men--francaise {
+        @include img_menu ($place_img: url('../images/mobile_version/française_340_227.jpg'))
+    }
+    .img__men--delice {
+        @include img_menu ($place_img: url('../images/mobile_version/Delice_340_233.jpg'))
+    }
     .liner_bottom {
         display: block;
         width: 100%;
@@ -39,7 +50,8 @@
             font-size: 1.5rem;
             margin-right: 20px;
         }
-        @include heart($heart_top_menu, $heart_right_menu);
+        @include heart($heart_top_menu,
+        $heart_right_menu);
     }
     ul.menu {
         display: flex;
@@ -69,14 +81,10 @@
             }
         }
         ul.list-section__menu {
-            .barre__menu {
-                animation: menu $anim-dur both ease-in-out;
-                @for $i from 1 through $anim-num {
-                    &--#{$i} {
-                        animation-delay: $anim-delay*$i;
-                    }
-                }
-            }
+            @include anim_menu;
+        }
+        ul.list-section__menu--enchantee {
+            @include anim_menu ($anim-num: 10)
         }
         li.btn__menu--section {
             background: #fff;
