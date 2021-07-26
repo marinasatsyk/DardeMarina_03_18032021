@@ -108,12 +108,12 @@
 }
 
 //progress bar 
-@mixin prog_bar ($padding_bar: .25rem) {
+@mixin prog_bar ($height_bar: 2vw, $padding_bar: .25rem) {
     .progress {
         position: absolute;
         top: 50%;
         width: 50vw;
-        height: 2vw;
+        height: $height_bar;
         border: 2px solid $color-primary;
         padding: $padding_bar;
         margin-bottom: 30px;

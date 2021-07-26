@@ -14,5 +14,5 @@
 
 @include prog_bar;
 @media #{$mobile-only} {
-    @include prog_bar ($padding_bar: .1rem)
+    @include prog_bar ($height_bar: 4.5vw, $padding_bar: .15rem)
 }
