@@ -2,10 +2,13 @@
     header.menu {
         height: 30px;
         display: flex;
-        justify-content: start;
+        justify-content: center;
+        margin: .7rem 0;
         a {
             display: block;
-            margin-right: 45%;
+            position: absolute;
+            top: 17px;
+            left: 30px;
         }
     }
     .img__menu {
@@ -24,9 +27,13 @@
         background: $color-btn-off;
         opacity: 1;
         border-radius: 30px 30px 0 0;
+        height: 30px;
     }
     section.title_princilal {
         background: $color-btn-off;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         .title {
             padding-top: 30px;
         }
@@ -49,10 +56,10 @@
         flex-direction: column;
         justify-content: space-evenly;
         padding-bottom: 30px;
+        width: 100%;
         >li {
             border-radius: 10px;
-            @include shadow_box;
-            padding: 20px;
+            padding: 0 20px;
             //width: 25%;
         }
         .title--entrees,
@@ -98,7 +105,6 @@
                 justify-content: space-between;
                 align-items: flex-end;
                 flex-wrap: nowrap;
-                font-weight: bold;
                 font-size: .9rem;
                 overflow: hidden;
                 text-overflow: ellipsis;
@@ -108,6 +114,7 @@
             }
             p.name {
                 font-size: .7rem;
+                font-weight: bold;
             }
             .name__separator>h4,
             p {
@@ -152,9 +159,17 @@
     }
     .btn--round_mobile {
         margin-bottom: 30px;
+        width: 195px;
+        letter-spacing: 1px;
+        font-weight: normal;
+        padding: 15px;
     }
     /*FOOTER*/
     footer {
         @include footer_mobile;
+        .logo_mobile {
+            width: 110px;
+            margin-bottom: 14px;
+        }
     }
 }
