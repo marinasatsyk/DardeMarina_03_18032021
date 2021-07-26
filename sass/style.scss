@@ -27,6 +27,7 @@
            p.main {
                padding: 10px 0;
                background-color: $color-back;
+               font-weight: bold;
            }
            .explorer {
                padding: 15% 10%;
@@ -38,6 +39,10 @@
                h1 {
                    font-size: 1.5rem;
                    font-weight: bold;
+                   margin-bottom: 20px;
+               }
+               p {
+                   margin-bottom: 30px;
                }
            }
            .btn--round {
@@ -101,13 +106,17 @@
                        content: counter(my-counter);
                        counter-increment: my-counter;
                        color: white;
-                       display: block;
+                       display: flex;
+                       justify-content: center;
+                       align-items: center;
                        height: 20px;
                        width: 20px;
                        border-radius: 50%;
                        background-color: $color-primary;
                        position: relative;
                        right: -10px;
+                       font-size: .8rem;
+                       font-weight: normal;
                    }
                    span {
                        display: flex;
