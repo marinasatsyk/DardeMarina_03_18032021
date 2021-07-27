@@ -71,14 +71,10 @@
                 }
             }
             ul.list-section__menu {
-                .barre__menu {
-                    animation: menu $anim-dur both ease-in-out;
-                    @for $i from 1 through $anim-num {
-                        &--#{$i} {
-                            animation-delay: $anim-delay*$i;
-                        }
-                    }
-                }
+                @include anim_menu;
+            }
+            ul.list-section__menu--enchantee {
+                @include anim_menu ($anim-num: 10)
             }
             li.btn__menu--section {
                 background: #fff;
