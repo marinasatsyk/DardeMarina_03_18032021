@@ -120,7 +120,7 @@ $right: $heart_right_main) {
     }
 }
 
-//animation apparistion du menu progressivement
+//animation apparition du menu progressivement
 @mixin anim_menu ($anim-num: 9) {
     .barre__menu {
         animation: menu $anim-dur both ease-in-out;
