@@ -53,6 +53,7 @@
                @include gradient_btn;
                @include shadow_box;
                color: #ffffff;
+               text-decoration: none;
                cursor: pointer;
                font-size: 0.9rem;
                position: relative;
@@ -61,6 +62,9 @@
                    &::after {
                        opacity: 1;
                    }
+               }
+               &:visited {
+                   color: #fff;
                }
                &::after {
                    content: "";

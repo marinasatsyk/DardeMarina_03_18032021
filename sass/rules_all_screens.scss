@@ -55,14 +55,19 @@
         @include gradient_btn;
         @include shadow_box;
         color: #ffffff;
+        text-decoration: none;
         cursor: pointer;
         font-size: 0.9rem;
         position: relative;
         z-index: 1;
+        display: inline-block;
         &:hover {
             &::after {
                 opacity: 1;
             }
+        }
+        &:visited {
+            color: #fff;
         }
         &::after {
             content: "";

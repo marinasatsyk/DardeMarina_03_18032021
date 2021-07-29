@@ -4,6 +4,7 @@
 
 @mixin gradient_btn_activ {
     background: linear-gradient(to bottom right, lighten($color-secondary, 15%), lighten($color-primary, 15%));
+    background: -moz-linear-gradient(to bottom right, lighten($color-secondary, 15%), lighten($color-primary, 15%));
 }
 
 @mixin shadow_box {
